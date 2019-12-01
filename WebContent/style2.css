@@ -1,0 +1,26 @@
+@charset "UTF-8";
+@charset "UTF-8";
+
+
+/* body{
+  background-image: url('images/temp_2.jpg');
+  background-size: cover;
+ } */
+ 
+ tr.spaceUnder>td {
+  		padding-bottom: 1em;
+	}
+	
+	table.test td {
+    margin: 12px 12px 12px 12px;
+    padding: 12px 12px 12px 12px;
+    
+	}
+	
+	table.test {
+    border-collapse: separate;
+    border-spacing: 5px;
+    *border-collapse: expression('separate', cellSpacing = '10px');
+	}
+	
+ 

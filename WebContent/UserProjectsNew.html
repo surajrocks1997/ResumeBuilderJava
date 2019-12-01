@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Projects Information</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style3.css">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script>
+  function getParameterByName(name, url) {
+	    if (!url) url = window.location.href;
+	    name = name.replace(/[\[\]]/g, "\\$&");
+	    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+	        results = regex.exec(url);
+	    if (!results) return null;
+	    if (!results[2]) return '';
+	    return decodeURIComponent(results[2].replace(/\+/g, " "));
+	}
+  </script>
+</head>
+<body class="background-imageProjects">
+	<h1 style="text-align: center; margin-top: 20px; color: yellow">User Details: Projects</h1>
+	<div class="form-group" style="margin-bottom: 40px; margin-left: 20px">
+	<form id="my_form" method="post">
+		<table class="test">
+			<tr class="spaceUnder">
+				<td style="color: white">Project Title:</td>
+				<td><input type="text" name="title" class="form-control" size="50" placeholder="Project Name" /></td>
+					
+			</tr>
+			<!-- <tr class="spaceUnder">
+				<td>Project Description:</td>
+				<td><input type="text" name="description" size="50" placeholder="Describe the project" /></td>
+					
+			</tr> -->
+			<tr class="spaceUnder">
+					<td style="color: white">Project Description:</td>
+					<td style="width: 500px; "><textarea class="form-control" name="description" id="description" placeholder="Describe the project"></textarea></td>
+				</tr>
+			<tr class="spaceUnder">
+				<td style="color: white">Front End:</td>
+				<td><input type="text" name="frontEnd" class="form-control" style="width: 350px" placeholder="Front end" /></td>
+			</tr>
+			<tr class="spaceUnder">
+				<td style="color: white">Back End:</td>
+				<td><input type="text" name="backEnd" class="form-control" style="width: 350px" placeholder="Back end" /></td>
+			</tr>
+			<tr class="spaceUnder">
+				<td style="color: white">Final Output:</td>
+				<td><input type="text" name="output" class="form-control" size="50" placeholder="Final output" /></td>
+			</tr>		
+			<tr class="spaceUnder">
+					<td><input type="submit" name="nextP" value="Add" class="btn btn-warning" /></td>
+					<td><input type="submit" name="nextP" value="Next" class="btn btn-warning" /></center></td>
+					<td><input type="reset" value="Reset" class="btn btn-details" /></td>
+					<td><input type=button value="Back" onCLick="history.back()" class="btn btn-details"></td>
+			</tr>
+		</table>
+	</form>
+	</div>
+</body>
+
+<script>
+		var a = getParameterByName('temp');
+		document.getElementById("my_form").action = "Projects.jsp?temp="+a+"&name="+getParameterByName('name')+"&school="+getParameterByName('school')+"&employer="+getParameterByName('employer')+"&achievement="+getParameterByName('achievement');
+
+	</script>
+</html>

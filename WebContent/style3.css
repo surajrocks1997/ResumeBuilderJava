@@ -1,0 +1,68 @@
+@charset "UTF-8";
+@charset "UTF-8";
+
+
+/* body{
+  background-image: url('images/temp_2.jpg');
+  background-size: cover;
+ } */
+ 
+ .background-imagePersonal{
+ 
+ 	background-image: url('images/Personal.jpg');
+  background-size: cover;
+ }
+ 
+  .background-imageEducation{
+ 
+ 	background-image: url('images/education3.jpg');
+  	background-size: cover; 
+  	
+ }
+ 
+  
+ .background-imageAchievements{
+ 
+ 	background-image: url('images/achievements.jpg');
+  background-size: cover;
+ }
+
+ .background-imageExperiences{
+ 
+ 	background-image: url('images/experiences.jpg');
+  	background-size: cover;
+ }
+ 
+ .background-imageProjects{
+ 
+ 	background-image: url('images/projects.jpg');
+  	background-size: cover;
+  	
+ } 
+ 
+ .blockquote {
+   color: yellow;
+   font-size: 35.8px;
+   font-family: Times New Roman;
+   text-align:left;
+   padding-top: 5px;
+   padding-left: 20px;
+ }
+ 
+ tr.spaceUnder>td {
+  		padding-bottom: 1em;
+	}
+	
+	table.test td {
+    margin: 12px 12px 12px 12px;
+    padding: 12px 12px 12px 12px;
+    
+	}
+	
+	table.test {
+    border-collapse: separate;
+    border-spacing: 5px;
+    *border-collapse: expression('separate', cellSpacing = '10px');
+	}
+	
+ 

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Personal Information</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style3.css">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script>
+  function getParameterByName(name, url) {
+	    if (!url) url = window.location.href;
+	    name = name.replace(/[\[\]]/g, "\\$&");
+	    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+	        results = regex.exec(url);
+	    if (!results) return null;
+	    if (!results[2]) return '';
+	    return decodeURIComponent(results[2].replace(/\+/g, " "));
+	}
+  </script>
+</head>
+<body class="background-imagePersonal">
+	<h1 style="text-align: center; margin-top: 20px; color: yellow">User Details: Personal</h1>
+	
+	<div class="form-group" style="margin-bottom: 40px; margin-left: 20px">
+		<form id="my_form" method="post" style="margin-top: 20px; margin-left: 30px; margin-bottom: 100px">
+  			<table class="test">
+				<tr class="spaceUnder">
+				<td style="color: white">Name:</td>
+				<td><input type="text" name="first" class="form-control" size="50" placeholder="First Name" /></td>
+				<td><input type="text" name="last" class="form-control" size="30" placeholder="Last Name" /></td>	
+				</tr>
+				
+				<tr class="spaceUnder">
+				<td style="color: white">Parent's Name:</td>
+				<td><input type="text" name="fatherName" class="form-control" size="50" placeholder="Father's Name" /></td>
+				<td><input type="text" name="motherName" class="form-control" size="25" placeholder="Mother's Name" /></td>	
+				</tr>
+				
+				<tr class="spaceUnder">
+				<td style="color: white">Date of birth:</td>
+				<td><input type="text" name="dob" class="form-control" size="30" placeholder="dd/mm/yyyy" /></td>
+				</tr>
+				
+				<tr class="spaceUnder">
+				<td style="color: white">Gender:</td>
+				<td style="width: 98px; "><select name="gender"
+						id="Gender" class="selectbx">
+							<option>-- select --</option>
+							<option value="MALE">Male</option>
+							<option value="FEMALE">Female</option>
+					</select></td>	
+				</tr>
+			
+				<tr class="spaceUnder">
+				<td style="color: white">Marital Status:</td>
+				<td><select name="marital_status"
+						id="Marital_Stauts" class="selectbx">
+							<option>-- select --</option>
+							<option value="MARRIED">Married</option>
+							<option value="UNMARRIED">Unmarried</option>
+					</select></td>
+				</tr>
+				
+				<tr class="spaceUnder">
+				<td style="color: white">Age:</td>
+				<td><input type="text" name="age" class="form-control" size="15" placeholder="Enter your age" /></td>
+				</tr>
+				
+				<tr>
+				<td style="color: white">Nationality:</td>
+				<td><input type="text" name="nationality" class="form-control" size="50" placeholder="Enter your Nationality" /></td>
+				</tr>
+				
+				<tr class="spaceUnder">
+					<td style="color: white">Address</td>
+					<td style="width: 201px; "><textarea class="textarea" name="address" id="Address"></textarea></td>
+					<td><input type="text" name="city" id="City" class="form-control" placeholder="City" /></td>
+				</tr>
+				
+				<tr class="spaceUnder">
+				<td style="color: white">Contact:</td>
+				<td><input type="text" name="contact" class="form-control" size="35" placeholder="Contact number" /></td>
+				</tr>
+				
+				<tr class="spaceUnder">
+				<td style="color: white">Email:</td>
+				<td><input type="text" name="email" class="form-control" size="50" placeholder="Email address" /></td>
+				</tr>
+				
+				<tr class="spaceUnder">
+				<td style="color: white">Languages:</td>
+				<td><input type="text" name="languages" class="form-control" size="50" placeholder="Languages" /></td>
+				</tr>
+			
+				<tr>
+				<td style="color: white">Career Objectives:</td>
+				<td><input type="text" name="career" class="form-control" size="50" placeholder="Career Goals" /></td>
+				</tr>
+			
+				<tr class="spaceUnder">
+				<td style="color: white">Strengths:</td>
+				<td><input type="text" name="strengths" class="form-control" size="50" placeholder="Your Strengths" /></td>
+				</tr>
+			
+				<tr class="spaceUnder">
+				<td style="color: white">Hobbies:</td>
+				<td><input type="text" name="hobbies" class="form-control" size="50" placeholder="Your Hobbies" /></td>
+				</tr>
+			
+				<tr class="spaceUnder">
+					<td><input type="submit" name="nextP" value="Add" class="btn btn-warning" /></td>
+					<td colspan="2">
+					<center><input type="submit" name="nextP" value="Next" class="btn btn-warning" /></center></td>
+					<td><input type="reset" value="Reset" class="btn btn-details" /></td>	
+				</tr>
+		</table>
+</form>
+<script>
+		var a = getParameterByName('temp');
+		document.getElementById("my_form").action = "Personal.jsp?temp="+a;
+
+	</script>
+</div>
+</body>
+</html>

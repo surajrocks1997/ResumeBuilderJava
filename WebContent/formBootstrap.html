@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+  
+  	tr.spaceUnder>td {
+  		padding-bottom: 1em;
+	}
+	
+	table.test td {
+    margin: 12px 12px 12px 12px;
+    padding: 12px 12px 12px 12px;
+	}
+	
+	table.test {
+    border-collapse: separate;
+    border-spacing: 10px;
+    *border-collapse: expression('separate', cellSpacing = '10px');
+	}
+	
+  </style>
+  
+<body>
+	<h1 style="text-align: center; margin-top: 20px">User Details: Personal</h1>
+	<section>
+	<div class="form-group" style="margin-bottom: 40px; margin-left: 20px">
+	<form action="Personal.jsp" method="post" style="margin-top: 20px; margin-left: 30px; margin-bottom: 20px">
+  <!-- <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" style="width: 850px" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" style="width: 850px" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="exampleSelect1">Example select</label>
+    <select class="form-control" style="width: 850px" id="exampleSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleSelect2">Example multiple select</label>
+    <select multiple style="width: 850px" class="form-control" id="exampleSelect2">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleTextarea">Example textarea</label>
+    <textarea style="width: 850px" class="form-control" id="exampleTextarea" rows="3"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" style="width: 850px" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+    <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+  </div>
+  <fieldset class="form-group">
+    <legend>Radio buttons</legend>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+        Option one is this and that&mdash;be sure to include why it's great
+      </label>
+    </div>
+    <div class="form-check">
+    <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+        Option two can be something else and selecting it will deselect option one
+      </label>
+    </div>
+    <div class="form-check disabled">
+    <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+        Option three is disabled
+      </label>
+    </div>
+  </fieldset>
+  <div class="form-check">
+    <label class="form-check-label">
+      <input type="checkbox" class="form-check-input">
+      Check me out
+    </label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button> -->
+  
+  
+  
+  <table class="test" cellspacing="30px">
+  
+  
+			<tr class="spaceUnder">
+				<td>Name:</td>
+				<td><input type="text" name="first" class="form-control" size="50" placeholder="First Name" /></td>
+				<td><input type="text" name="last" class="form-control" size="50" placeholder="Last Name" /></td>	
+			</tr>
+			<tr class="spaceUnder">
+				<td>Parent's Name:</td>
+				<td><input type="text" name="fatherName" class="form-control" size="50" placeholder="Father's Name" /></td>
+				<td><input type="text" name="motherName" class="form-control" size="50" placeholder="Mother's Name" /></td>	
+			</tr>
+			<tr class="spaceUnder">
+				<td>Date of birth:</td>
+				<td><input type="text" name="dob" class="form-control" size="25" placeholder="dd/mm/yyyy" /></td>
+			</tr>
+			<tr class="spaceUnder">
+				<td>Gender:</td>
+				<td style="width: 98px; "><select name="gender"
+						id="Gender" class="selectbx">
+							<option>-- select --</option>
+							<option value="MALE">Male</option>
+							<option value="FEMALE">Female</option>
+					</select></td>	
+			</tr>
+			<tr class="spaceUnder">
+				<td>Marital Status:</td>
+				<td><select name="marital_status"
+						id="Marital_Stauts" class="selectbx">
+							<option>-- select --</option>
+							<option value="MARRIED">Married</option>
+							<option value="UNMARRIED">Unmarried</option>
+					</select></td>
+			</tr>
+			<tr class="spaceUnder">
+				<td>Age:</td>
+				<td><input type="text" name="age" class="form-control" size="15" placeholder="Enter your age" /></td>
+			</tr>
+			<tr>
+				<td>Nationality:</td>
+				<td><input type="text" name="nationality" class="form-control" size="25" placeholder="Enter your Nationality" /></td>
+			</tr>
+			<tr class="spaceUnder">
+					<td>Address</td>
+
+					<td style="width: 201px; "><textarea class="textarea"
+							name="address" id="Address"></textarea></td>
+					<td><input type="text" name="city"
+						id="City" class="textbox"
+						placeholder="City" /></td>
+				</tr>
+				<tr class="spaceUnder">
+				<td>Contact:</td>
+				<td><input type="text" name="contact" class="form-control" size="35" placeholder="Contact number" /></td>
+			</tr>
+			<tr class="spaceUnder">
+				<td>Email:</td>
+				<td><input type="text" name="email" class="form-control" size="50" placeholder="Email address" /></td>
+			</tr>
+			<tr class="spaceUnder">
+				<td>Languages:</td>
+				<td><input type="text" name="languages" class="form-control" size="50" placeholder="Languages" /></td>
+			</tr>
+			<tr>
+				<td>Career Objectives:</td>
+				<td><input type="text" name="career" class="form-control" size="50" placeholder="Career Goals" /></td>
+			</tr>
+			<tr class="spaceUnder">
+				<td>Strengths:</td>
+				<td><input type="text" name="strengths" class="form-control" size="50" placeholder="Your Strengths" /></td>
+			</tr>
+			<tr class="spaceUnder">
+				<td>Hobbies:</td>
+				<td><input type="text" name="hobbies" class="form-control" size="50" placeholder="Your Hobbies" /></td>
+			</tr>
+			<tr class="spaceUnder">
+					<td><input type="submit" name="nextP" value="Add" class="button" /></td>
+					<td colspan="2">
+							<center><input type="submit" name="nextP" value="Next" class="button" /></center></td>
+					<td><input type="reset" value="Reset" class="button" /></td>	
+			</tr>
+		</table>
+</form>
+</div>
+</section>
+</body>
+</html>
